@@ -1,16 +1,16 @@
 <html>
 <head>
-<title>Sistema de Conversión de Hojas de Cálculo</title>
+<title>Micro servicio de Conversión de Hojas de Cálculo</title>
 </head>
 <body>
 <style> a { text-decoration: none } </style>
 <pre>
-<b>Proxy:</b> send a request to /api/data to convert the spreadsheet at `url` to a simpler format
+<b>Proxy:</b> envíe una solicitud a /api/data para convertir la hoja de cálculo en `url` a un formato más simple
 
 <b>parameters:</b>
-- url=&lt;url&gt;      the url to request
-- N=&lt;idx&gt;        the sheet index to use (-1 returns a list of sheet names in the workbook)
-- t=&lt;type&gt;       export type: "json" for json, "html" for html, default is CSV
+- url=&lt;url&gt;      la url para solicitar
+- N=&lt;idx&gt;        el índice de hoja a usar (-1 devuelve una lista de nombres de hoja en el libro de trabajo)
+- t=&lt;type&gt;       tipo de exportación: "json" para json, "html" para html, el valor predeterminado es CSV
 
 <b>examples:</b>
 </pre>
@@ -43,33 +43,33 @@ for(var i = 0; i < URLS.length; ++i) {
 </script>
 <pre>
 
-<b>Upload:</b> upload a file to /api/upload to convert the spreadsheet at `url` to a simpler format
+<b>Upload:</b> suba un archivo a /api/upload para convertir la hoja de cálculo en `url` a un formato más simple
 
 <b>parameters:</b>
-- N=&lt;idx&gt;        the sheet index to use (-1 returns a list of sheet names in the workbook)
-- t=&lt;type&gt;       export type: "json" for json, "html" for html, default is CSV
+- N=&lt;idx&gt;        el índice de hoja a usar (-1 devuelve una lista de nombres de hoja en el libro de trabajo)
+- t=&lt;type&gt;       tipo de exportación: "json" para json, "html" para html, el valor predeterminado es CSV
 
 <b>example:</b>
 <form method="POST" action="api/upload" enctype="multipart/form-data"><input type="hidden" name="N" value="0">
-<label for="file">Upload a file</label>
+<label for="file">Subir archivo</label>
 <input type="file" name="file" id="file">
 
 <label for="t">Export type</label>
 <select name="t" id="t">
-	<option value="csv" selected>CSV</option>
-	<option value="json">Array of arrays</option>
-	<option value="html">HTML TABLE</option>
+	<option value="csv">CSV</option>
+	<option value="json" selected>JSON</option>
+	<option value="html">Tabla HTML</option>
 </select>
 
-<input type="submit" value="Click here to upload!">
+<input type="submit" value="Click para Subir">
 </form>
 
 <b>This service is powered by <a href="https://www.maivall.com">MaiVall</a></b>
 
-<b>Source Code (Author):</b>
+<b>Código fuente (Autor):</b>
 
-- <a href="https://github.com/SheetJS/sheetaki">Source code for this service</a>
-- <a href="https://github.com/SheetJS/sheetjs">Source code for the SheetJS spreadsheet library</a>
+- <a href="https://github.com/SheetJS/sheetaki"Código fuente para este servicio</a>
+- <a href="https://github.com/SheetJS/sheetjs">Código fuente para la biblioteca de hojas de cálculo SheetJS</a>
 </pre>
 
 </body>
