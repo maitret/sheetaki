@@ -1,13 +1,10 @@
 <html>
 <head>
-<title>SheetJS Spreadsheet Conversion Service</title>
-<link rel="icon" type="image/png" href="//sheetjs.com/logo.png"/>
+<title>Sistema de Conversión de Hojas de Cálculo</title>
 </head>
 <body>
 <style> a { text-decoration: none } </style>
 <pre>
-<b><a href="http://sheetjs.com">SheetJS</a> Spreadsheet Conversion Service</b>
-
 <b>Proxy:</b> send a request to /api/data to convert the spreadsheet at `url` to a simpler format
 
 <b>parameters:</b>
@@ -28,12 +25,12 @@ var URLS = [
 	[],
 	["[LIST]", {url:URL2,N:-1}],
 	["[N=1] ", {url:URL2,N:1}],
-//	["[N=2] ", {url:URL2,N:2}],
-//	["[N=3] ", {url:URL2,N:3}],
+	["[N=2] ", {url:URL2,N:2}],
+	["[N=3] ", {url:URL2,N:3}],
 	["[N=4] ", {url:URL2,N:4}],
-//	["[N=5] ", {url:URL2,N:5}],
-//	["[N=6] ", {url:URL2,N:6}],
-//	["[N=7] ", {url:URL2,N:7}],
+	["[N=5] ", {url:URL2,N:5}],
+	["[N=6] ", {url:URL2,N:6}],
+	["[N=7] ", {url:URL2,N:7}],
 	["[N=8] ", {url:URL2,N:8}]
 ];
 var parms = ["N", "t"];
@@ -67,26 +64,13 @@ for(var i = 0; i < URLS.length; ++i) {
 <input type="submit" value="Click here to upload!">
 </form>
 
-<b>This service is powered by <a href="http://sheetjs.com">SheetJS</a></b>
+<b>This service is powered by <a href="https://www.maivall.com">MaiVall</a></b>
 
-<b>Source Code:</b>
+<b>Source Code (Author):</b>
 
 - <a href="https://github.com/SheetJS/sheetaki">Source code for this service</a>
-
 - <a href="https://github.com/SheetJS/sheetjs">Source code for the SheetJS spreadsheet library</a>
 </pre>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36810333-1']);
-  _gaq.push(['_setDomainName', 'sheetjs.com']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>
